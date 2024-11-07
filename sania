@@ -1,0 +1,39 @@
+# VU Id: [Your VU Id here]
+
+# Base class representing a generic Painting
+class Painting:
+    def Display(self):
+        print("I'm just a generic painting.")
+
+# Derived class for AbstractPainting
+class AbstractPainting(Painting):
+    def Display(self):
+        print("I'm an Abstract Painting.")
+
+# Derived class for LandscapePainting
+class LandscapePainting(Painting):
+    def Display(self):
+        print("I'm a Landscape Painting.")
+
+# Derived class for PortraitPainting
+class PortraitPainting(Painting):
+    def Display(self):
+        print("I'm a Portrait Painting.")
+
+# Main application where we create an array of paintings
+def main():
+    # Creating a list of different painting objects
+    paintings = [
+        Painting(),                # A generic painting
+        AbstractPainting(),        # An abstract painting
+        LandscapePainting(),       # A landscape painting
+        PortraitPainting()         # A portrait painting
+    ]
+    
+    # Iterating through the list and calling Display() for each object
+    for painting in paintings:
+        painting.Display()
+
+# Running the main application
+if __name__ == "__main__":
+    main()
